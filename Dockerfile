@@ -4,7 +4,7 @@ FROM rust:1
 
 # Copy local code to the container image.
 WORKDIR /usr/src/app
-COPY . .
+# COPY . .
 
 # Install production dependencies and build a release artifact.
 # RUN cargo install --path .
