@@ -8,7 +8,7 @@ COPY . .
 
 # Install production dependencies and build a release artifact.
 # RUN cargo install --path .
-cargo install --git https://github.com/projectsophon/darkforest-rs --bin mimc-fast --force --branch=main
+RUN cargo install --git https://github.com/projectsophon/darkforest-rs --bin mimc-fast --force --branch=main
 
 # Run the web service on container startup.
 CMD ["mimc-fast"]
