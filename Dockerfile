@@ -4,11 +4,12 @@ FROM rust:1
 
 # Copy local code to the container image.
 WORKDIR /usr/src/app
-# COPY . .
+COPY . .
 
 # Install production dependencies and build a release artifact.
 # RUN cargo install --path .
-RUN cargo install --git https://github.com/projectsophon/darkforest-rs --bin mimc-fast --force --branch=main
+# RUN cargo install --git https://github.com/projectsophon/darkforest-rs --bin mimc-fast --force --branch=main
+RUN cargo install --bin mimc-fast
 
 # Run the web service on container startup.
 CMD ["RUST_LOG=info mimc-fast"]
