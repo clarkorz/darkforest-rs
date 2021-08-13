@@ -11,4 +11,4 @@ COPY . .
 RUN cargo install --git https://github.com/projectsophon/darkforest-rs --bin mimc-fast --force --branch=main
 
 # Run the web service on container startup.
-CMD ["RUST_LOG=info mimc-fast"]
+CMD ["mimc-fast"]
